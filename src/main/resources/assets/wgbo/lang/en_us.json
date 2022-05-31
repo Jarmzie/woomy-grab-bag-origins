@@ -1,0 +1,11 @@
+{
+  "origin.wgbo.jawa.name": "Offworld Jawa",
+  "origin.wgbo.jawa.description": "Passionate scavengers who have left their home planet of Tatooine to explore a new world.",
+
+  "power.wgbo.jawa/short_stature.name": "Short Stature",
+  "power.wgbo.jawa/short_stature.description": "You're shorter than most other humanoids.",
+  "power.wgbo.jawa/disgusting_creature.name": "Disgusting Creatures!",
+  "power.wgbo.jawa/disgusting_creature.description": "You must cover yourself from head to toe or lose health.",
+  "power.wgbo.jawa/trade_speak.name": "Trade Speak",
+  "power.wgbo.jawa/trade_speak.description": "You speak a language specifically for trade. You're very good at convincing traders for discounts."
+}
