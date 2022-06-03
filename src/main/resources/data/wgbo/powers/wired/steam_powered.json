@@ -1,0 +1,198 @@
+{
+  "type": "origins:multiple",
+  "inefficient_engineering": {
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+      "name": "Increased exhaustion",
+      "operation": "multiply_base",
+      "value": 2.0
+    }
+  },
+
+  "cant_eat": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+      "type": "origins:food"
+    }
+  },
+  "saplings": {
+    "type": "origins:active_self",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:equipped_item_action",
+          "equipment_slot": "mainhand",
+          "action": {
+            "type": "origins:consume",
+            "amount": 1
+          }
+        },
+        {
+          "type": "origins:apply_effect",
+          "effect": {
+            "effect": "minecraft:speed",
+            "duration": 100,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true
+          }
+        }
+      ]
+    },
+    "cooldown": 1,
+    "hud_render": {
+      "should_render": false
+    },
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    },
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+          "item": "minecraft:saplings"
+        }
+      }
+    }
+  },
+  "fuel_consumption": {
+    "type": "origins:multiple",
+
+
+
+    "logs": {
+      "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:consume",
+        "food": 4.0,
+        "saturation": 2.4
+      },
+      "cooldown": 20,
+      "hud_render": {
+        "should_render": false
+      },"key": {
+        "key": "key.use",
+        "continuous": true
+      },
+      "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:logs_that_burn"
+          }
+        }
+      }
+    },
+
+    "coal": {
+      "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:feed",
+        "food": 8.0,
+        "saturation": 12.8
+      },
+      "cooldown": 20,
+      "hud_render": {
+        "should_render": false
+      },"key": {
+        "key": "key.use",
+        "continuous": true
+      },
+      "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:coal"
+          }
+        }
+      }
+    },
+
+    "charcoal": {
+      "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:feed",
+        "food": 8.0,
+        "saturation": 12.8
+      },
+      "cooldown": 20,
+      "hud_render": {
+        "should_render": false
+      },"key": {
+        "key": "key.use",
+        "continuous": true
+      },
+      "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:charcoal"
+          }
+        }
+      }
+    },
+
+    "blazerod": {
+      "type": "origins:active_self",
+      "entity_action": {
+        "type": "origins:feed",
+        "food": 6.0,
+        "saturation": 14.4
+      },
+      "cooldown": 20,
+      "hud_render": {
+        "should_render": false
+      },"key": {
+        "key": "key.use",
+        "continuous": true
+      },
+      "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "minecraft:blaze_rod"
+          }
+        }
+      }
+    }
+  },
+
+  "low_power_mode": {
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -10,
+    "max_stacks": 2,
+    "duration_per_stack": 10,
+    "effects": [
+      {
+        "effect": "minecraft:weakness",
+        "is_ambient": false,
+        "show_particles": false,
+        "show_icon": true
+      },
+      {
+        "effect": "minecraft:slowness",
+        "is_ambient": false,
+        "show_particles": false,
+        "show_icon": true
+      }
+    ],
+    "condition": {
+      "type": "origins:food_level",
+      "comparison": "<=",
+      "compare_to": 6
+    }
+  }
+}

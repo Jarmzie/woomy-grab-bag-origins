@@ -2,7 +2,8 @@
   "powers": [
     "wgbo:wired/metal_exterior",
     "wgbo:wired/water_impairment",
-    "wgbo:wired/mechanical_limbs"
+    "wgbo:wired/mechanical_limbs",
+    "wgbo:wired/steam_powered"
   ],
   "icon": {
     "item": "minecraft:iron_ingot"
