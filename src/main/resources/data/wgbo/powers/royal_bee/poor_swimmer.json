@@ -1,0 +1,21 @@
+{
+  "type": "origins:multiple",
+  "slow_swim": {
+    "type": "origins:modify_swim_speed",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -0.6
+    }
+  },
+  "weak_limbs": {
+    "type": "origins:exhaust",
+    "interval": 20,
+    "exhaustion": 4,
+    "condition": {
+      "type": "origins:fluid_height",
+      "fluid": "minecraft:water",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  }
+}

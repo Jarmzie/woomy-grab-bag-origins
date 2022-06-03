@@ -2,6 +2,8 @@
   "replace": false,
   "enabled": true,
   "origins": [
-    "wgbo:jawa"
+    "wgbo:jawa",
+    "wgbo:royal_bee",
+    "wgbo:wired"
   ]
 }

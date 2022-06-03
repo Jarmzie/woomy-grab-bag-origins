@@ -1,0 +1,15 @@
+{
+  "type": "origins:multiple",
+  "night_vision": {
+    "type": "origins:night_vision",
+    "strength": 0.75
+  },
+  "immune_system": {
+    "type": "origins:effect_immunity",
+    "effects": [
+      "minecraft:poison",
+      "minecraft:wither",
+      "minecraft:weakness"
+    ]
+  }
+}

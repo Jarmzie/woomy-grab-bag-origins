@@ -1,0 +1,11 @@
+{
+  "powers": [
+    "wgbo:wired/metal_exterior",
+    "wgbo:wired/water_impairment"
+  ],
+  "icon": {
+    "item": "minecraft:iron_ingot"
+  },
+  "order": 0,
+  "impact": 2
+}

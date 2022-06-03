@@ -1,0 +1,30 @@
+{
+  "type": "origins:multiple",
+  "anchorage": {
+    "type": "origins:ignore_water"
+  },
+  "water_damage": {
+    "type": "origins:damage_over_time",
+    "interval": 20,
+    "damage": 2,
+    "damage_source": {
+      "name": "drown",
+      "bypass_armour": true,
+      "unblockable": true
+    },
+    "condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:fluid_height",
+          "fluid": "minecraft:water",
+          "comparison": ">",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:in_rain"
+        }
+      ]
+    }
+  }
+}

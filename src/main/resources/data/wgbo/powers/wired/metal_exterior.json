@@ -1,0 +1,41 @@
+{
+  "type": "origins:multiple",
+  "iron_skin": {
+    "type": "origins:attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "value": 14,
+        "operation": "addition"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "value": 0.2,
+        "operation": "multiply_base"
+      }
+    ]
+  },
+  "redundant_measures": {
+    "type": "origins:restrict_armor",
+    "head": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "chest": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "legs": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "feet": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  }
+}

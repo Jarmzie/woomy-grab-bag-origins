@@ -1,0 +1,19 @@
+{
+  "powers": [
+    "wgbo:royal_bee/insect",
+    "wgbo:royal_bee/winged",
+    "wgbo:royal_bee/flutter",
+    "wgbo:royal_bee/pollinator",
+    "wgbo:royal_bee/poor_swimmer",
+    "origins:vegetarian",
+    "wgbo:royal_bee/stinging_punch",
+    "wgbo:royal_bee/flammable",
+    "wgbo:royal_bee/four_arms",
+    "wgbo:royal_bee/preferred_climate"
+  ],
+  "icon": {
+    "item": "minecraft:honeycomb"
+  },
+  "order": 0,
+  "impact": 1
+}

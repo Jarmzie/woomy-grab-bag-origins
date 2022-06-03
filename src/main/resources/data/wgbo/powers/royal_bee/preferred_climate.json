@@ -1,0 +1,56 @@
+{
+  "type": "origins:stacking_status_effect",
+  "min_stacks": -10,
+  "max_stacks": 2,
+  "duration_per_stack": 10,
+  "effects": [
+    {
+      "effect": "minecraft:weakness",
+      "is_ambient": false,
+      "show_particles": false,
+      "show_icon": true
+    },
+    {
+      "effect": "minecraft:slowness",
+      "is_ambient": false,
+      "show_particles": false,
+      "show_icon": true
+    }
+  ],
+  "condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:biome",
+        "condition": {
+          "type": "origins:category",
+          "category": "desert"
+        }
+      },
+      {
+        "type": "origins:biome",
+        "condition": {
+          "type": "origins:category",
+          "category": "icy"
+        }
+      },
+      {
+        "type": "origins:biome",
+        "condition": {
+          "type": "origins:category",
+          "category": "mesa"
+        }
+      },
+      {
+        "type": "origins:biome",
+        "biomes": [
+          "minecraft:snowy_beach",
+          "minecraft:frozen_peaks",
+          "minecraft:snowy_slopes",
+          "minecraft:frozen_river",
+          "minecraft:snowy_taiga"
+        ]
+      }
+    ]
+  }
+}

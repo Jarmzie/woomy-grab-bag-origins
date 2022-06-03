@@ -1,0 +1,41 @@
+{
+  "type": "origins:action_on_hit",
+  "bientity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:actor_action",
+        "action": {
+          "type": "origins:damage",
+          "amount": 2,
+          "source": {
+            "name": "thorns",
+            "bypasses_armor": true,
+            "unblockable": true
+          }
+        }
+      },
+      {
+        "type": "origins:target_action",
+        "action": {
+          "type": "origins:apply_effect",
+          "effect": {
+            "effect": "minecraft:poison",
+            "duration": 100,
+            "amplifier": 2
+          }
+        }
+      }
+    ]
+  },
+  "bientity_condition": {
+    "type": "origins:actor_condition",
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:empty"
+      }
+    }
+  }
+}

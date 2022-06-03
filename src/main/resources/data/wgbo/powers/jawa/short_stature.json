@@ -57,22 +57,22 @@
       {
         "type": "origins:execute_command",
         "permission_level": 4,
-        "command": "scale set pehkui:height 0.75 @s"
+        "command": "scale reset pehkui:height @s"
       },
       {
         "type": "origins:execute_command",
         "permission_level": 4,
-        "command": "scale set pehkui:width 0.75 @s"
+        "command": "scale reset pehkui:width @s"
       },
       {
         "type": "origins:execute_command",
         "permission_level": 4,
-        "command": "scale set pehkui:motion 0.9 @s"
+        "command": "scale reset pehkui:motion @s"
       },
       {
         "type": "origins:execute_command",
         "permission_level": 4,
-        "command": "scale set pehkui:reach 0.9 @s"
+        "command": "scale reset pehkui:reach @s"
       }
     ]
   }

@@ -6,6 +6,10 @@
   "power.wgbo.jawa/short_stature.description": "You're shorter than most other humanoids.",
   "power.wgbo.jawa/disgusting_creature.name": "Disgusting Creatures!",
   "power.wgbo.jawa/disgusting_creature.description": "You must cover yourself from head to toe or lose health.",
+  "power.wgbo.jawa/desert_survivalist.name": "Desert Survivalist",
+  "power.wgbo.jawa/desert_survivalist.description": "You have inherent night vision and poison immunity.",
+  "power.wgbo.jawa/ion_blaster.name": "Ion Blaster",
+  "power.wgbo.jawa/ion_blaster.description": "Your arrows do more damage have a chance of inflicting special effects.",
   "power.wgbo.jawa/trade_speak.name": "Trade Speak",
   "power.wgbo.jawa/trade_speak.description": "You speak a language specifically for trade. You're very good at convincing traders for discounts."
 }

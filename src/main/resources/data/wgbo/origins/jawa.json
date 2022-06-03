@@ -1,7 +1,9 @@
 {
   "powers": [
     "wgbo:jawa/disgusting_creature",
-    "wgbo:jawa/short_stature"
+    "wgbo:jawa/short_stature",
+    "wgbo:jawa/desert_survivalist",
+    "wgbo:jawa/ion_blaster"
   ],
   "icon": {
     "item": "minecraft:sand"
