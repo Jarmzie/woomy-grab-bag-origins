@@ -1,0 +1,48 @@
+{
+  "type": "origins:multiple",
+  "built_in_weapons": {
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+      "name": "Default Damage Increase",
+      "value": 6,
+      "operation": "addition"
+    },
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:empty"
+      }
+    }
+  },
+  "built_in_tools": {
+    "type": "origins:modify_break_speed",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": 0.167
+    },
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:empty"
+      }
+    }
+  },
+  "built_in_drill": {
+    "type": "origins:modify_harvest",
+    "block_condition": {
+      "type": "origins:hardness",
+      "comparison": "<=",
+      "compare_to": 22.5
+    },
+    "condition": {
+      "type": "origins:equipped_item",
+      "equipment_slot": "mainhand",
+      "item_condition": {
+        "type": "origins:empty"
+      }
+    },
+    "allow": true
+  }
+}
