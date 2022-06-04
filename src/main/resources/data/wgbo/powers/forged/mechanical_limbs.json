@@ -17,9 +17,13 @@
   },
   "built_in_tools": {
     "type": "origins:modify_break_speed",
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "minecraft:mineable/pickaxe"
+    },
     "modifier": {
-      "operation": "multiply_total",
-      "value": 0.167
+      "operation": "multiply_base",
+      "value": 6
     },
     "condition": {
       "type": "origins:equipped_item",
@@ -44,5 +48,22 @@
       }
     },
     "allow": true
+  },
+  "extendable_arms": {
+    "type": "origins:attribute",
+    "modifiers": [
+      {
+        "name": "Extra Reach block reach",
+        "attribute": "reach-entity-attributes:reach",
+        "value": 1.5,
+        "operation": "addition"
+      },
+      {
+        "name": "Extra Reach entity reach",
+        "attribute": "reach-entity-attributes:attack_range",
+        "value": 1.5,
+        "operation": "addition"
+      }
+    ]
   }
 }
