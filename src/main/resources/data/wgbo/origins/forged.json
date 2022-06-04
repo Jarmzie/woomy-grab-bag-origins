@@ -1,0 +1,13 @@
+{
+  "powers": [
+    "wgbo:forged/metal_exterior",
+    "wgbo:forged/water_impairment",
+    "wgbo:forged/mechanical_limbs",
+    "wgbo:forged/steam_powered"
+  ],
+  "icon": {
+    "item": "minecraft:iron_ingot"
+  },
+  "order": 0,
+  "impact": 2
+}

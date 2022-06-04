@@ -8,7 +8,6 @@
       "value": 2.0
     }
   },
-
   "cant_eat": {
     "type": "origins:prevent_item_use",
     "item_condition": {
@@ -62,9 +61,6 @@
   },
   "fuel_consumption": {
     "type": "origins:multiple",
-
-
-
     "logs": {
       "type": "origins:active_self",
       "entity_action": {
@@ -90,7 +86,6 @@
         }
       }
     },
-
     "coal": {
       "type": "origins:active_self",
       "entity_action": {
@@ -116,7 +111,6 @@
         }
       }
     },
-
     "charcoal": {
       "type": "origins:active_self",
       "entity_action": {
@@ -142,7 +136,6 @@
         }
       }
     },
-
     "blazerod": {
       "type": "origins:active_self",
       "entity_action": {
@@ -169,7 +162,6 @@
       }
     }
   },
-
   "low_power_mode": {
     "type": "origins:stacking_status_effect",
     "min_stacks": -10,
