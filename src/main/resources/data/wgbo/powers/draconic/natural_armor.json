@@ -1,0 +1,51 @@
+{
+  "type": "origins:multiple",
+  "defensive_scales": {
+    "type": "origins:attribute",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "value": 14,
+        "operation": "addition"
+      },
+      {
+        "attribute": "minecraft:generic.max_health",
+        "value": 0.2,
+        "operation": "multiply_base"
+      }
+    ]
+  },
+  "scaly_build": {
+    "type": "origins:restrict_armor",
+    "head": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "chest": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "legs": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    },
+    "feet": {
+      "type": "origins:armor_value",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "flame-hardened_scales": {
+    "type": "origins:modify_damage_taken",
+    "modifier": {
+      "value": -0.5,
+      "operation": "multiply_total"
+    },
+    "damage_condition": {
+      "type": "origins:fire"
+    }
+  }
+}
