@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:saplings",
+    "#wgbo:sticks",
+    "#minecraft:logs_that_burn",
+    "#wgbo:planks_that_burn",
+    "#minecraft:coals",
+    "minecraft:coal_block",
+    "minecraft:blaze_rod"
+  ]
+}

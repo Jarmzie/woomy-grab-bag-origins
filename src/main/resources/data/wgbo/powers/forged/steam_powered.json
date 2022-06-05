@@ -25,14 +25,24 @@
       "should_render": false
     },
     "condition": {
-      "type": "origins:equipped_item",
-      "equipment_slot": "mainhand",
-      "item_condition": {
-        "type": "origins:ingredient",
-        "ingredient": {
-          "item": "minecraft:coal"
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "wgbo:forged_fuel"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
         }
-      }
+      ]
     },
     "entity_action": {
       "type": "origins:and",
@@ -162,130 +172,128 @@
           "permission_level": 4
         },
         {
-          "type": "origins:if_else",
-          "condition": {
-            "type": "origins:equipped_item",
-            "equipment_slot": "mainhand",
-            "item_condition": {
-              "type": "origins:ingredient",
-              "ingredient": {
-                "tag": "minecraft:saplings"
-              }
-            }
-          },
-          "if_action": {
-            "type": "origins:feed",
-            "food": 2,
-            "saturation": 0.4
-          },
-          "else_action": {
-            "type": "origins:if_else",
-            "condition": {
-              "type": "origins:equipped_item",
-              "equipment_slot": "mainhand",
-              "item_condition": {
-                "type": "origins:ingredient",
-                "ingredient": {
-                  "tag": "minecraft:logs_that_burn"
-                }
-              }
-            },
-            "if_action": {
-              "type": "origins:feed",
-              "food": 4,
-              "saturation": 2.4
-            },
-            "else_action": {
-              "type": "origins:if_else",
+          "type": "origins:if_else_list",
+          "actions": [
+            {
               "condition": {
                 "type": "origins:equipped_item",
                 "equipment_slot": "mainhand",
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:planks"
+                    "tag": "minecraft:saplings"
                   }
                 }
               },
-              "if_action": {
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "wgbo:sticks"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 0.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:logs_that_burn"
+                  }
+                }
+              },
+              "action": {
                 "type": "origins:feed",
                 "food": 4,
-                "saturation": 2.4
-              },
-              "else_action": {
-                "type": "origins:if_else",
-                "condition": {
-                  "type": "origins:equipped_item",
-                  "equipment_slot": "mainhand",
-                  "item_condition": {
-                    "type": "origins:ingredient",
-                    "ingredient": {
-                      "item": "minecraft:coal"
-                    }
-                  }
-                },
-                "if_action": {
-                  "type": "origins:feed",
-                  "food": 2,
-                  "saturation": 1.2
-                },
-                "else_action": {
-                  "type": "origins:if_else",
-                  "condition": {
-                    "type": "origins:equipped_item",
-                    "equipment_slot": "mainhand",
-                    "item_condition": {
-                      "type": "origins:ingredient",
-                      "ingredient": {
-                        "item": "minecraft:charcoal"
-                      }
-                    }
-                  },
-                  "if_action": {
-                    "type": "origins:feed",
-                    "food": 2,
-                    "saturation": 1.2
-                  },
-                  "else_action": {
-                    "type": "origins:if_else",
-                    "condition": {
-                      "type": "origins:equipped_item",
-                      "equipment_slot": "mainhand",
-                      "item_condition": {
-                        "type": "origins:ingredient",
-                        "ingredient": {
-                          "item": "minecraft:coal_block"
-                        }
-                      }
-                    },
-                    "if_action": {
-                      "type": "origins:feed",
-                      "food": 18,
-                      "saturation": 12.8
-                    },
-                    "else_action": {
-                      "type": "origins:if_else",
-                      "condition": {
-                        "type": "origins:equipped_item",
-                        "equipment_slot": "mainhand",
-                        "item_condition": {
-                          "type": "origins:ingredient",
-                          "ingredient": {
-                            "item": "minecraft:blaze_rod"
-                          }
-                        }
-                      },
-                      "if_action": {
-                        "type": "origins:feed",
-                        "food": 6,
-                        "saturation": 14.4
-                      }
-                    }
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "wgbo:planks_that_burn"
                   }
                 }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 1,
+                "saturation": 0.3
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:coals"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 2.4
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:coal_block"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 18,
+                "saturation": 21.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:blaze_rod"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 8,
+                "saturation": 19.2
               }
             }
-          }
+          ]
         },
         {
           "type": "origins:change_resource",
