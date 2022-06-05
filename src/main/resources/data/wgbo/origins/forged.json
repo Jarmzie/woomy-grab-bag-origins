@@ -3,7 +3,9 @@
     "wgbo:forged/metal_exterior",
     "wgbo:forged/water_impairment",
     "wgbo:forged/mechanical_limbs",
-    "wgbo:forged/steam_powered"
+    "wgbo:forged/steam_powered",
+    "wgbo:forged/power_thrusters",
+    "wgbo:forged/hyper_mode"
   ],
   "icon": {
     "item": "minecraft:iron_ingot"

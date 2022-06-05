@@ -2,8 +2,8 @@
     "type": "origins:launch",
     "cooldown": 500,
     "hud_render": {
-        "sprite_location": "grounded_origins:textures/gui/custom_bars.png",
-        "bar_index": 1
+        "sprite_location": "wgbo:textures/gui/custom_bars.png",
+        "bar_index": 0
     },
     "sound": "minecraft:entity.parrot.fly",
     "speed": 1.50,

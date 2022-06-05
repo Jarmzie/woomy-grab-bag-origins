@@ -1,0 +1,14 @@
+{
+  "type": "origins:launch",
+  "cooldown": 420,
+  "hud_render": {
+    "sprite_location": "wgbo:textures/gui/custom_bars.png",
+    "bar_index": 1
+  },
+  "sound": "minecraft:entity.parrot.fly",
+  "speed": 0.75,
+  "key": {
+    "key": "key.origins.primary_active",
+    "continuous": true
+  }
+}

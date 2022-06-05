@@ -85,7 +85,7 @@
         },
         "cooldown": 50,
         "hud_render": {
-            "sprite_location": "grounded_origins:textures/gui/custom_bars.png",
+            "sprite_location": "wgbo:textures/gui/custom_bars.png",
             "bar_index": 2
         },
         "key": {
