@@ -5,12 +5,20 @@
         "min_stacks": -30,
         "max_stacks": 120,
         "duration_per_stack": 20,
-        "effect": {
-            "effect": "minecraft:strength",
-            "is_ambient": true,
-            "show_particles": false,
-            "show_icon": false
-        },
+        "effects": [
+            {
+                "effect": "minecraft:strength",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "minecraft:regeneration",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ],
         "condition": {
             "type": "origins:biome",
             "biome": "minecraft:flower_forest"
@@ -22,11 +30,10 @@
         "max_stacks": 120,
         "duration_per_stack": 20,
         "effects": {
-            "effect": "minecraft:resistance",
+            "effect": "minecraft:health_boost",
             "is_ambient": true,
             "show_particles": false,
-            "show_icon": false,
-            "amplifier": 2
+            "show_icon": false
         },
         "condition": {
             "type": "origins:or",
