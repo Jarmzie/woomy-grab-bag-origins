@@ -11,5 +11,21 @@
   "power.wgbo.jawa/ion_blaster.name": "Ion Blaster",
   "power.wgbo.jawa/ion_blaster.description": "Your arrows do more damage have a chance of inflicting special effects.",
   "power.wgbo.jawa/trade_speak.name": "Trade Speak",
-  "power.wgbo.jawa/trade_speak.description": "You speak a language specifically for trade. You're very good at convincing traders for discounts."
+  "power.wgbo.jawa/trade_speak.description": "You speak a language specifically for trade. You're very good at convincing traders for discounts.",
+
+  "origin.wgbo.forged.name": "Forged",
+  "origin.wgbo.forged.description": "A mechanical race constructed from iron to be a synthetic lifeform.",
+
+  "power.wgbo.forged/metal_exterior.name": "Metal Exterior",
+  "power.wgbo.forged/metal_exterior.description": "Your have innate iron armor and extra health but you cannot wear other armor.",
+  "power.wgbo.forged/mechanical_limbs.name": "Mechanical Limbs",
+  "power.wgbo.forged/mechanical_limbs.description": "Your bare hands are as strong as an iron pickaxe.",
+  "power.wgbo.forged/steam_powered.name": "Steam Powered",
+  "power.wgbo.forged/steam_powered.description": "You burn energy faster than biological lifeforms and must refuel by consuming furnace fuel.",
+  "power.wgbo.forged/water_intolerance.name": "Water Intolerance",
+  "power.wgbo.forged/water_intolerance.description": "You cannot swim and will sink in water due to your weight. It also damages you.",
+  "power.wgbo.forged/hyper_mode.name": "Burst Harvest",
+  "power.wgbo.forged/hyper_mode.description": "You can give yourself haste 2 for 10 seconds every 30 seconds.",
+  "power.wgbo.forged/power_thrusters.name": "Power Thrusters",
+  "power.wgbo.forged/power_thrusters.description": "You can launch yourself up in the air every 30 seconds."
 }

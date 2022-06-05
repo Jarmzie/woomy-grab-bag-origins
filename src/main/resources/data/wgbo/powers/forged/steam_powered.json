@@ -116,9 +116,9 @@
       ]
     }
   },
-
   "fake_eat_slow_movement": {
     "type": "origins:conditioned_attribute",
+    "tick_rate": 4,
     "modifier": {
       "attribute": "minecraft:generic.movement_speed",
       "operation": "multiply_total",
@@ -158,14 +158,6 @@
     "max_action": {
       "type": "origins:and",
       "actions": [
-        {
-          "type": "origins:equipped_item_action",
-          "equipment_slot": "mainhand",
-          "action": {
-            "type": "origins:consume",
-            "amount": 1
-          }
-        },
         {
           "type": "origins:execute_command",
           "command": "playsound minecraft:entity.player.burp player @a[distance=..10] ~ ~ ~ 1 1",
@@ -294,6 +286,14 @@
               }
             }
           ]
+        },
+        {
+          "type": "origins:equipped_item_action",
+          "equipment_slot": "mainhand",
+          "action": {
+            "type": "origins:consume",
+            "amount": 1
+          }
         },
         {
           "type": "origins:change_resource",
