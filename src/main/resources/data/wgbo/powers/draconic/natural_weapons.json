@@ -4,7 +4,7 @@
     "type": "origins:modify_damage_dealt",
     "modifier": {
       "name": "Default Damage Increase",
-      "value": 5.5,
+      "value": 2.5,
       "operation": "addition"
     },
     "condition": {

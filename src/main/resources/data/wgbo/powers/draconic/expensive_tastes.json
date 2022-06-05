@@ -159,14 +159,6 @@
       "type": "origins:and",
       "actions": [
         {
-          "type": "origins:equipped_item_action",
-          "equipment_slot": "mainhand",
-          "action": {
-            "type": "origins:consume",
-            "amount": 1
-          }
-        },
-        {
           "type": "origins:execute_command",
           "command": "playsound minecraft:entity.player.burp player @a[distance=..10] ~ ~ ~ 1 1",
           "permission_level": 4
@@ -182,23 +174,6 @@
                   "type": "origins:ingredient",
                   "ingredient": {
                     "tag": "minecraft:iron_nugget"
-                  }
-                }
-              },
-              "action": {
-                "type": "origins:feed",
-                "food": 2,
-                "saturation": 0.6
-              }
-            },
-            {
-              "condition": {
-                "type": "origins:equipped_item",
-                "equipment_slot": "mainhand",
-                "item_condition": {
-                  "type": "origins:ingredient",
-                  "ingredient": {
-                    "tag": "minecraft:copper_nugget"
                   }
                 }
               },
@@ -414,6 +389,14 @@
               }
             }
           ]
+        },
+        {
+          "type": "origins:equipped_item_action",
+          "equipment_slot": "mainhand",
+          "action": {
+            "type": "origins:consume",
+            "amount": 1
+          }
         },
         {
           "type": "origins:change_resource",
