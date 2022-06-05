@@ -8,7 +8,7 @@
   },
   "count": 3,
   "interval": 5,
-  "sound": "minecraft:mob/ghast/fireball4",
+  "sound": "minecraft:entity.ender_dragon.shoot",
   "key": {
     "key": "key.origins.primary_active",
     "continuous": true

@@ -198,6 +198,23 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
+                    "tag": "minecraft:copper_nugget"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
                     "tag": "minecraft:gold_nugget"
                   }
                 }
@@ -216,6 +233,23 @@
                   "type": "origins:ingredient",
                   "ingredient": {
                     "tag": "minecraft:iron_ingot"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 6,
+                "saturation": 9.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:copper_ingot"
                   }
                 }
               },
@@ -266,6 +300,23 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
+                    "tag": "minecraft:raw_copper"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
                     "item": "minecraft:raw_gold"
                   }
                 }
@@ -284,6 +335,24 @@
                   "type": "origins:ingredient",
                   "ingredient": {
                     "item": "minecraft:emerald"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 6,
+                "saturation": 14.4
+              }
+            },
+
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:amethyst_shard"
                   }
                 }
               },
