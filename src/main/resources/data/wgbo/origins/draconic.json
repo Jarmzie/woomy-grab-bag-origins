@@ -1,0 +1,14 @@
+{
+  "powers": [
+    "wgbo:draconic/draining_flight",
+    "wgbo:draconic/expensive_tastes",
+    "wgbo:draconic/natural_armor",
+    "wgbo:draconic/natural_weapons",
+    "wgbo:draconic/fire_breath"
+  ],
+  "icon": {
+    "item": "minecraft:dragon_head"
+  },
+  "order": 0,
+  "impact": 2
+}

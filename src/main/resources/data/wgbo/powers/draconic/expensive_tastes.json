@@ -1,0 +1,422 @@
+{
+  "type": "origins:multiple",
+  "poor_diet": {
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+      "name": "Increased exhaustion",
+      "operation": "multiply_base",
+      "value": 2.5
+    }
+  },
+  "particular_tastes": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+      "type": "origins:food"
+    }
+  },
+  "devour": {
+    "type": "origins:active_self",
+    "cooldown": 1,
+    "key": {
+      "key": "key.use",
+      "continuous": true
+    },
+    "hud_render": {
+      "should_render": false
+    },
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:equipped_item",
+          "equipment_slot": "mainhand",
+          "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "tag": "wgbo:draconic_diet"
+            }
+          }
+        },
+        {
+          "type": "origins:food_level",
+          "comparison": "<",
+          "compare_to": 20
+        }
+      ]
+    },
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:if_else",
+          "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_consume_resource_delay",
+            "comparison": "==",
+            "compare_to": 8
+          },
+          "if_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_consume_resource",
+            "operation": "add",
+            "change": 1
+          }
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "add",
+          "change": 1
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_hold_buffer",
+          "change": 2
+        }
+      ]
+    }
+  },
+
+  "fake_eat": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "execute at @s positioned ~ ~1.5 ~ run particle minecraft:flame ^ ^ ^0.3 .09 .03 .03 0 3",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:item.firecharge.use player @a[distance=..10] ~ ~ ~ 1 1",
+          "permission_level": 4
+        }
+      ]
+    },
+    "interval": 4,
+    "condition": {
+      "type": "origins:and",
+      "inverted": false,
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "inverted": false,
+          "resource": "*:*_consume_resource",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "inverted": false,
+          "resource": "*:*_consume_resource",
+          "comparison": "<",
+          "compare_to": 32
+        }
+      ]
+    }
+  },
+
+  "fake_eat_slow_movement": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_total",
+      "value": -0.8
+    },
+    "condition": {
+      "type": "origins:resource",
+      "inverted": false,
+      "resource": "*:*_consume_resource_delay",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+
+  "fake_eat_slow_air_speed": {
+    "type": "origins:modify_air_speed",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -0.9
+    },
+    "condition": {
+      "type": "origins:resource",
+      "inverted": false,
+      "resource": "*:*_consume_resource_delay",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+
+  "consume_resource": {
+    "type": "origins:resource",
+    "max": 32,
+    "min": 0,
+    "hud_render": {
+      "should_render": false
+    },
+    "max_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:equipped_item_action",
+          "equipment_slot": "mainhand",
+          "action": {
+            "type": "origins:consume",
+            "amount": 1
+          }
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.player.burp player @a[distance=..10] ~ ~ ~ 1 1",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:if_else_list",
+          "actions": [
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:iron_nugget"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 0.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:gold_nugget"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:iron_ingot"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 6,
+                "saturation": 9.6
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:gold_ingot"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 8,
+                "saturation": 12.8
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "tag": "minecraft:raw_iron"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 2,
+                "saturation": 1.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:raw_gold"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 3,
+                "saturation": 1.8
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:emerald"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 6,
+                "saturation": 14.4
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:diamond"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 10,
+                "saturation": 12
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:netherite_scrap"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 4,
+                "saturation": 10.2
+              }
+            },
+            {
+              "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                  "type": "origins:ingredient",
+                  "ingredient": {
+                    "item": "minecraft:netherite_ingot"
+                  }
+                }
+              },
+              "action": {
+                "type": "origins:feed",
+                "food": 15,
+                "saturation": 24.6
+              }
+            }
+          ]
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource",
+          "operation": "set",
+          "change": 0
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "set",
+          "change": 0
+        }
+      ]
+    }
+  },
+  "consume_resource_delay": {
+    "type": "origins:resource",
+    "max": 8,
+    "min": 0,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "hold_buffer": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 3,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "clean_hold_buffer": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_hold_buffer",
+      "change": -1
+    },
+    "interval": 1,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_hold_buffer",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "stop_consumption": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "falling_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource",
+          "operation": "set",
+          "change": 0
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "set",
+          "change": 0
+        }
+      ]
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_hold_buffer",
+      "comparison": ">",
+      "compare_to": 1
+    }
+  }
+}

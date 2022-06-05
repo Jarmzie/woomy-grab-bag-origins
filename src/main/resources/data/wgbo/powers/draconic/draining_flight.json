@@ -1,0 +1,33 @@
+{
+  "type": "origins:multiple",
+  "elytra": {
+    "type": "origins:elytra_flight",
+    "render_elytra": true,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "inverted": true,
+          "type": "origins:equipped_item",
+          "equipment_slot": "chest",
+          "item_condition": {
+            "type": "origins:armor_value",
+            "comparison": ">=",
+            "compare_to": 1
+          }
+        }
+      ]
+    }
+  },
+  "exhausting_flight": {
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+      "name": "Increased exhaustion",
+      "operation": "multiply_base",
+      "value": 1
+    },
+    "condition": {
+      "type": "origins:fall_flying"
+    }
+  }
+}
