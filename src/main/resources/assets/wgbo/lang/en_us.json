@@ -27,5 +27,41 @@
   "power.wgbo.forged/hyper_mode.name": "Burst Harvest",
   "power.wgbo.forged/hyper_mode.description": "You can give yourself haste 2 for 10 seconds every 30 seconds.",
   "power.wgbo.forged/power_thrusters.name": "Power Thrusters",
-  "power.wgbo.forged/power_thrusters.description": "You can launch yourself up in the air every 30 seconds."
+  "power.wgbo.forged/power_thrusters.description": "You can launch yourself up in the air every 30 seconds.",
+
+  "origin.wgbo.royal_bee.name": "Royal Bee",
+  "origin.wgbo.royal_bee.description": "A small bee race that enjoys forested biomes filled with flowers.",
+
+  "power.wgbo.royal_bee/flammable.name": "Flammable",
+  "power.wgbo.royal_bee/flammable.description": "Your Fluff causes you to take 50% more damage from heat-based sources.",
+  "power.wgbo.royal_bee/flutter.name": "Flutter",
+  "power.wgbo.royal_bee/flutter.description": "Every 25 second, you are able to launch yourself 10-20 blocks upwards.",
+  "power.wgbo.royal_bee/four_arms.name": "Bug Limbs",
+  "power.wgbo.royal_bee/four_arms.description": "You are able to climb Vertical Surfaces.",
+  "power.wgbo.royal_bee/insect.name": "Insect",
+  "power.wgbo.royal_bee/insect.description": "you are 4 times smaller than a regular human, you have 25% less attack/build range. You have 4 hearts, but your body is incredibly light, allowing you to take a fall or collision from any height.",
+  "power.wgbo.royal_bee/pollinator.name": "Pollinator",
+  "power.wgbo.royal_bee/pollinator.description": "Having 15 flowers within 20 blocks will boost your health by two hearts and allow you to bone-meal the block you're looking at. Flower Forests make you stronger.",
+  "power.wgbo.royal_bee/poor_swimmer.name": "Poor Swimmer",
+  "power.wgbo.royal_bee/poor_swimmer.description": "You are slowed while swimming and get exhausted quicker.",
+  "power.wgbo.royal_bee/preferred_climate.name": "Preferred Climate",
+  "power.wgbo.royal_bee/preferred_climate.description": "You don't like leaving your natural environment, you get slowness and weakness when in desert or snow based biomes.",
+  "power.wgbo.royal_bee/stinging_punch.name": "Stinging Punch",
+  "power.wgbo.royal_bee/stinging_punch.description": "You inflict Poison with your strikes, but it harms you to do.",
+  "power.wgbo.royal_bee/winged.name": "Winged",
+  "power.wgbo.royal_bee/winged.description": "You're capable of flight, but chestplates cover up your wings entirely.",
+
+  "origin.wgbo.draconic.name": "Draconic",
+  "origin.wgbo.draconic.description": "A proud dragon race that lives off of wealth.",
+
+  "power.wgbo.draconic/draining_flight.name": "Draining Flight",
+  "power.wgbo.draconic/draining_flight.description": "You're capable of flight, but your heavy body makes you tire quickly.",
+  "power.wgbo.draconic/expensive_tastes.name": "Expensive Tastes",
+  "power.wgbo.draconic/expensive_tastes.description": "You cannot eat normal food, and your diet consists of precious metals and gems",
+  "power.wgbo.draconic/fire_breath.name": "Dragon's Breath",
+  "power.wgbo.draconic/fire_breath.description": "You are capable of spewing 3 fireballs to attack every 25 seconds.",
+  "power.wgbo.draconic/natural_armor.name": "Natural Armor",
+  "power.wgbo.draconic/natural_armor.description": "You have tough scales that increase your defenses and protect from fire, but you cannot wear normal armor.",
+  "power.wgbo.draconic/natural_weapons.name": "Natural Weapons",
+  "power.wgbo.draconic/natural_weapons.description": "Your tough claws function as natural weapons when empty handed."
 }
