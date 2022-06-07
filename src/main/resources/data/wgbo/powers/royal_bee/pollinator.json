@@ -10,13 +10,15 @@
                 "effect": "minecraft:strength",
                 "is_ambient": true,
                 "show_particles": false,
-                "show_icon": false
+                "show_icon": false,
+                "amplifier": 1
             },
             {
                 "effect": "minecraft:regeneration",
                 "is_ambient": true,
                 "show_particles": false,
-                "show_icon": false
+                "show_icon": false,
+                "amplifier": 1
             }
         ],
         "condition": {
@@ -25,16 +27,12 @@
         }
     },
     "resistance": {
-        "type": "origins:stacking_status_effect",
-        "min_stacks": -30,
-        "max_stacks": 120,
-        "duration_per_stack": 20,
-        "effects": {
-            "effect": "minecraft:health_boost",
-            "is_ambient": true,
-            "show_particles": false,
-            "show_icon": false
-        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+                "attribute": "minecraft:generic.max_health",
+                "value": 4,
+                "operation": "addition"
+            },
         "condition": {
             "type": "origins:or",
             "conditions": [
