@@ -1,0 +1,450 @@
+{
+  "type": "origins:multiple",
+  "solar_meter": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 100,
+    "hud_render": {
+      "sprite_location": "wgbo:textures/gui/custom_bars.png",
+      "bar_index": 5
+    }
+  },
+  "solar_powered": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "comparison": "==",
+            "compare_to": 100
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": ">=",
+                "compare_to": 75
+              },
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": "<",
+                "compare_to": 100
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": ">=",
+                "compare_to": 50
+              },
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": "<",
+                "compare_to": 75
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": ">=",
+                "compare_to": 25
+              },
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": "<",
+                "compare_to": 50
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": ">",
+                "compare_to": 0
+              },
+              {
+                "type": "origins:resource",
+                "resource": "wgbo:plantlike/solar_power_solar_meter",
+                "comparison": "<",
+                "compare_to": 25
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "comparison": "==",
+            "compare_to": 0
+          },
+          "action": {
+            "type": "origins:and",
+            "actions": [
+              {
+                "type": "origins:grant_power",
+                "power": "wgbo:plantlike/no_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/middling_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/low_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/mid_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/high_energy",
+                "source": "wgbo:power_granter"
+              },
+              {
+                "type": "origins:revoke_power",
+                "power": "wgbo:plantlike/full_energy",
+                "source": "wgbo:power_granter"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "interval": 20
+  },
+  "power_drain": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:time_of_day",
+                "comparison": "<=",
+                "compare_to": 12000
+              },
+              {
+                "type": "origins:exposed_to_sky"
+              },
+              {
+                "type": "origins:in_rain",
+                "inverted": "true"
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": 2
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:time_of_day",
+                "comparison": "<=",
+                "compare_to": 12000
+              },
+              {
+                "type": "origins:exposed_to_sky"
+              },
+              {
+                "type": "origins:in_rain"
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": 1
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:time_of_day",
+                "comparison": ">",
+                "compare_to": 12000
+              },
+              {
+                "type": "origins:exposed_to_sky"
+              },
+              {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": "==",
+                "compare_to": 0
+              },
+              {
+                "type": "origins:in_rain",
+                "inverted": "true"
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": -1
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": "==",
+                "compare_to": 0
+              },
+              {
+                "type": "origins:exposed_to_sky",
+                "inverted": true
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": -1
+          }
+        }
+      ]
+    },
+    "interval": 240
+  },
+  "rejuvination": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned":{
+      "type": "origins:change_resource",
+      "resource": "wgbo:plantlike/solar_power_solar_meter",
+      "change": 75,
+      "operation": "set"
+    }
+  },
+
+  "revitalize": {
+    "type": "origins:action_on_callback",
+    "entity_action_respawned":{
+      "type": "origins:change_resource",
+      "resource": "wgbo:plantlike/solar_power_solar_meter",
+      "change": 75,
+      "operation": "set"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "origins:modify_damage_dealt",
+  "target_condition": {
+    "type": "origins:or",
+    "conditions": [
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:zombie"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:zombie_villager"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:zombified_piglin"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:zombie_horse"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:husk"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:drowned"
+      },
+      {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:zoglin"
+      }
+    ]
+  },
+  "modifier": {
+    "name": "Extra damage to zombies",
+    "operation": "addition",
+    "value": 4
+  }
+}

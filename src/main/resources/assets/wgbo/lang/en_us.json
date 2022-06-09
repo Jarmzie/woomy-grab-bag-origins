@@ -63,5 +63,17 @@
   "power.wgbo.draconic/natural_armor.name": "Natural Armor",
   "power.wgbo.draconic/natural_armor.description": "You have tough scales that increase your defenses and protect from fire, but you cannot wear normal armor.",
   "power.wgbo.draconic/natural_weapons.name": "Natural Weapons",
-  "power.wgbo.draconic/natural_weapons.description": "Your tough claws function as natural weapons when empty handed."
+  "power.wgbo.draconic/natural_weapons.description": "Your tough claws function as natural weapons when empty handed.",
+
+  "origin.wgbo.plantlike.name": "Sunflower Dryad",
+  "origin.wgbo.plantlike.description": "A humanoid plant that uses energy from the sun to energize themselves. They can use their touch of nature to spur plant growth around them and enhance their abilities.",
+
+  "power.wgbo.plantlike/solar_power.name": "Solar Powered",
+  "power.wgbo.plantlike/solar_power.description": "You use the power of the sun to energize you, gaining health, strength and speed the higher your energy bar. you lose energy at night or indoors, but water will let you preserve your energy.",
+  "power.wgbo.plantlike/affinity_for_plants.name": "Affinity for Plants",
+  "power.wgbo.plantlike/affinity_for_plants.description": "You leave a trail of grass behind you, and can crouch to nurture crops beneath your feet.",
+  "power.wgbo.plantlike/flammable_body.name": "flammable leaves",
+  "power.wgbo.plantlike/flammable_body.description": "Your plant-based body is weak to fire and combusts in the nether without any fire protection.",
+  "power.wgbo.plantlike/zombie_slayer.name": "Zombie Slayer",
+  "power.wgbo.plantlike/zombie_slayer.description": "You deal additional damage to zombies to help get them off your lawn."
 }

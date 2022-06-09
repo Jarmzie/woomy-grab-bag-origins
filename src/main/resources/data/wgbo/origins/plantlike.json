@@ -1,0 +1,14 @@
+{
+  "powers": [
+    "wgbo:plantlike/solar_power",
+    "wgbo:plantlike/zombie_slayer",
+    "origins:vegetarian",
+    "wgbo:plantlike/flammable_body",
+    "wgbo:plantlike/affinity_for_plants"
+  ],
+  "icon": {
+    "item": "minecraft:sunflower"
+  },
+  "order": 0,
+  "impact": 2
+}

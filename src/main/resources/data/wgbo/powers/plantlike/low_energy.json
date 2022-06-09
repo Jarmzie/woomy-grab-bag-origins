@@ -1,0 +1,39 @@
+{
+  "type": "origins:multiple",
+  "weak_constitution":{
+    "type": "origins:attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.max_health",
+      "value": -2,
+      "operation": "addition"
+    }
+  },
+  "lack_of_energy": {
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -30,
+    "max_stacks": 30,
+    "duration_per_stack": 20,
+    "effects": [
+      {
+        "effect": "minecraft:weakness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": false,
+        "amplifier": 0
+      },
+      {
+        "effect": "minecraft:slowness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": false,
+        "amplifier": 0
+      }
+    ]
+  },
+  "wilting_leaves": {
+    "type": "origins:model_color",
+    "red": 0.74,
+    "green": 0.69,
+    "blue": 0.53
+  }
+}

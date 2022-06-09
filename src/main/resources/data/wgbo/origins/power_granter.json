@@ -1,0 +1,15 @@
+{
+  "powers": [
+    "wgbo:plantlike/full_energy",
+    "wgbo:plantlike/high_energy",
+    "wgbo:plantlike/mid_energy",
+    "wgbo:plantlike/low_energy",
+    "wgbo:plantlike/middling_energy",
+    "wgbo:plantlike/no_energy"
+  ],
+  "icon": {
+    "item": "minecraft:bedrock"
+  },
+  "order": 0,
+  "impact": 2
+}

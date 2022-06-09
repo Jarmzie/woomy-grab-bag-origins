@@ -1,0 +1,53 @@
+{
+  "type": "origins:multiple",
+  "weak_constitution":{
+    "type": "origins:attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.max_health",
+      "value": -6,
+      "operation": "addition"
+    }
+  },
+  "lack_of_energy": {
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -30,
+    "max_stacks": 30,
+    "duration_per_stack": 20,
+    "effects": [
+      {
+        "effect": "minecraft:weakness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": false,
+        "amplifier": 1
+      },
+      {
+        "effect": "minecraft:slowness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": false,
+        "amplifier": 1
+      }
+    ]
+  },
+  "withering_flower":{
+    "type": "origins:stacking_status_effect",
+    "min_stacks": -30,
+    "max_stacks": 1,
+    "duration_per_stack": 80,
+    "tick_rate": 40,
+    "effect": {
+      "effect": "minecraft:wither",
+      "is_ambient": true,
+      "show_particles": false,
+      "show_icon": false,
+      "amplifier": 0
+    }
+  },
+  "wilting_leaves": {
+    "type": "origins:model_color",
+    "red": 0.30,
+    "green": 0.27,
+    "blue": 0.18
+  }
+}
