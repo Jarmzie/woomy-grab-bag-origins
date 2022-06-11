@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "wgbo",
   "version": "${version}",
-
   "name": "Woomy's Grab Bag Origins",
   "description": "A collection of origins for a group of friends",
   "authors": [
