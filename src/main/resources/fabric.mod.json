@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "id": "wgbo",
   "version": "${version}",
-
   "name": "Woomy's Grab Bag Origins",
   "description": "A collection of origins for a group of friends",
   "authors": [
@@ -10,13 +9,10 @@
     "Eless0"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Jarmzie/woomy-grab-bag-origins"
   },
-
   "license": "MIT",
   "icon": "assets/wgbo/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
@@ -25,12 +21,13 @@
   },
   "mixins": [
   ],
-
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
     "minecraft": "~1.18.2",
-    "java": ">=17"
+    "java": ">=17",
+    "origins": ">=1.4.0",
+    "pehkui": ">=3.2.0"
   },
   "suggests": {
     "another-mod": "*"

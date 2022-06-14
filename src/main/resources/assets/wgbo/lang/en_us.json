@@ -17,7 +17,7 @@
   "origin.wgbo.forged.description": "A mechanical race constructed from iron to be a synthetic lifeform.",
 
   "power.wgbo.forged/metal_exterior.name": "Metal Exterior",
-  "power.wgbo.forged/metal_exterior.description": "Your have innate iron armor and extra health but you cannot wear other armor.",
+  "power.wgbo.forged/metal_exterior.description": "You have innate iron armor and extra health but you cannot wear other armor.",
   "power.wgbo.forged/mechanical_limbs.name": "Mechanical Limbs",
   "power.wgbo.forged/mechanical_limbs.description": "Your bare hands are as strong as an iron pickaxe.",
   "power.wgbo.forged/steam_powered.name": "Steam Powered",
@@ -30,7 +30,7 @@
   "power.wgbo.forged/power_thrusters.description": "You can launch yourself up in the air every 30 seconds.",
 
   "origin.wgbo.royal_bee.name": "Royal Bee",
-  "origin.wgbo.royal_bee.description": "A small bee race that enjoys forested biomes filled with flowers. Heavily inspired and some powers borrowed by Mo's Grounded Origins Moth origin",
+  "origin.wgbo.royal_bee.description": "A small bee race that enjoys forested biomes filled with flowers. Heavily inspired and some powers borrowed by Mo's Grounded Origins Moth origin.",
 
   "power.wgbo.royal_bee/flammable.name": "Flammable",
   "power.wgbo.royal_bee/flammable.description": "Your Fluff causes you to take 50% more damage from heat-based sources.",
@@ -39,7 +39,7 @@
   "power.wgbo.royal_bee/four_arms.name": "Bug Limbs",
   "power.wgbo.royal_bee/four_arms.description": "You are able to climb Vertical Surfaces.",
   "power.wgbo.royal_bee/insect.name": "Insect",
-  "power.wgbo.royal_bee/insect.description": "you are 4 times smaller than a regular human, you have 25% less attack/build range. You have 4 hearts, but your body is incredibly light, allowing you to take a fall or collision from any height.",
+  "power.wgbo.royal_bee/insect.description": "You are 4 times smaller than a regular human, you have 25% less attack/build range. You have 4 hearts, but your body is incredibly light, allowing you to take a fall or collision from any height.",
   "power.wgbo.royal_bee/pollinator.name": "Pollinator",
   "power.wgbo.royal_bee/pollinator.description": "Having 15 flowers within 20 blocks will boost your health by two hearts and allow you to bone-meal the block you're looking at. Flower Forests make you stronger.",
   "power.wgbo.royal_bee/poor_swimmer.name": "Poor Swimmer",
@@ -57,7 +57,7 @@
   "power.wgbo.draconic/draining_flight.name": "Draining Flight",
   "power.wgbo.draconic/draining_flight.description": "You're capable of flight, but your heavy body makes you tire quickly.",
   "power.wgbo.draconic/expensive_tastes.name": "Expensive Tastes",
-  "power.wgbo.draconic/expensive_tastes.description": "You cannot eat normal food, and your diet consists of precious metals and gems",
+  "power.wgbo.draconic/expensive_tastes.description": "You cannot eat normal food, and your diet consists of precious metals and gems.",
   "power.wgbo.draconic/fire_breath.name": "Dragon's Breath",
   "power.wgbo.draconic/fire_breath.description": "You are capable of spewing 3 fireballs to attack every 25 seconds.",
   "power.wgbo.draconic/natural_armor.name": "Natural Armor",
@@ -69,10 +69,10 @@
   "origin.wgbo.plantlike.description": "A humanoid plant that uses energy from the sun to energize themselves. They can use their touch of nature to spur plant growth around them and enhance their abilities.",
 
   "power.wgbo.plantlike/solar_power.name": "Solar Powered",
-  "power.wgbo.plantlike/solar_power.description": "You use the power of the sun to energize you, gaining health, strength and speed the higher your energy bar. you lose energy at night or indoors, but water will let you preserve your energy.",
+  "power.wgbo.plantlike/solar_power.description": "You use the power of the sun to energize you, gaining health, strength and speed the higher your energy bar. You lose energy at night or indoors, but water will let you preserve your energy.",
   "power.wgbo.plantlike/affinity_for_plants.name": "Affinity for Plants",
   "power.wgbo.plantlike/affinity_for_plants.description": "You leave a trail of grass behind you, and can crouch to nurture crops beneath your feet.",
-  "power.wgbo.plantlike/flammable_body.name": "flammable leaves",
+  "power.wgbo.plantlike/flammable_body.name": "Flammable Leaves",
   "power.wgbo.plantlike/flammable_body.description": "Your plant-based body is weak to fire and combusts in the nether without any fire protection.",
   "power.wgbo.plantlike/zombie_slayer.name": "Zombie Slayer",
   "power.wgbo.plantlike/zombie_slayer.description": "You deal additional damage to zombies to help get them off your lawn."
