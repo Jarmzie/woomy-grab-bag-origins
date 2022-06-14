@@ -29,5 +29,11 @@
         "amplifier": 1
       }
     ]
+  },
+  "healthy_leaves": {
+    "type": "origins:model_color",
+    "red": 1,
+    "green": 1,
+    "blue": 1
   }
 }
