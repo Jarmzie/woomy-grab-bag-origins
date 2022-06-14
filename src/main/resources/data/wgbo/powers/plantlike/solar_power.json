@@ -440,11 +440,49 @@
 
   "revitalize": {
     "type": "origins:action_on_callback",
-    "entity_action_respawned":{
+    "entity_action_gained":{
       "type": "origins:change_resource",
       "resource": "wgbo:plantlike/solar_power_solar_meter",
       "change": 75,
       "operation": "set"
+    }
+  },
+  "clear_powers": {
+    "type": "origins:action_on_callback",
+    "entity_action_lost": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/no_energy",
+          "source": "wgbo:power_granter"
+        },
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/middling_energy",
+          "source": "wgbo:power_granter"
+        },
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/low_energy",
+          "source": "wgbo:power_granter"
+        },
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/mid_energy",
+          "source": "wgbo:power_granter"
+        },
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/high_energy",
+          "source": "wgbo:power_granter"
+        },
+        {
+          "type": "origins:revoke_power",
+          "power": "wgbo:plantlike/full_energy",
+          "source": "wgbo:power_granter"
+        }
+      ]
     }
   }
 }

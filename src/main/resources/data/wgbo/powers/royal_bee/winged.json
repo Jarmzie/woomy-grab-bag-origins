@@ -24,7 +24,7 @@
                     "item_condition": {
                         "type": "origins:armor_value",
                         "comparison": ">=",
-                        "compare_to": 1
+                        "compare_to": 5
                     }
                 }
             ]
