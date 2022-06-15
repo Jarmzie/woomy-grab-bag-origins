@@ -61,18 +61,10 @@
             }
         },
         "item_condition": {
-            "type": "origins:or",
-            "conditions": [
-                {
-                    "type": "origins:empty"
-                },
-                {
-                  "type": "origins:ingredient",
-                    "ingredient": {
-                        "item": "minecraft:string"
-                    }
-                }
-            ]
+          "type": "origins:ingredient",
+            "ingredient": {
+                "item": "minecraft:string"
+            }
         },
         "hands": [
             "main_hand"

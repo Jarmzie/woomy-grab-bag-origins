@@ -83,7 +83,7 @@
                         "action": {
                             "type": "origins:bonemeal"
                         },
-                        "y": 0
+                        "y": 1
                     }
                 }
             ]
