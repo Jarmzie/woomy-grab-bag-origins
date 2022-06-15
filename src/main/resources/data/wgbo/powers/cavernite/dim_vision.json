@@ -1,0 +1,16 @@
+{
+  "type": "origins:night_vision",
+  "strength": 0.9,
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:exposed_to_sun"
+      },
+      {
+        "type": "origins:daytime"
+      }
+    ],
+    "inverted": true
+  }
+}

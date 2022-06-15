@@ -35,12 +35,7 @@
       "actions": [
         {
           "type": "origins:execute_command",
-          "command": "execute at @s run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 1 1",
-          "permission_level": 4
-        },
-        {
-          "type": "origins:execute_command",
-          "command": "execute at @s positioned ~ ~1.5 ~ run particle minecraft:flame ^ ^ ^0.3 .09 .03 .03 0 6",
+          "command": "execute at @s run playsound minecraft:item.firecharge.use player @a ~ ~ ~ 1 1",
           "permission_level": 4
         },
         {
@@ -213,6 +208,11 @@
     "type": "origins:resource",
     "min": 0,
     "max": 20,
+    "min_action": {
+      "type": "origins:execute_command",
+      "command": "execute at @s run playsound minecraft:entity.iron_golem.repair player @a ~ ~ ~ 1 1",
+      "permission_level": 4
+    },
     "hud_render": {
       "should_render": false
     },
@@ -222,9 +222,19 @@
     "type": "origins:action_over_time",
     "interval": "1",
     "entity_action": {
-      "type": "origins:change_resource",
-      "resource": "*:*_refuel_timer",
-      "change": -1
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_refuel_timer",
+          "change": -1
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "execute at @s positioned ~ ~1.5 ~ run particle minecraft:flame ^ ^ ^0.3 .09 .03 .03 0 1",
+          "permission_level": 4
+        }
+      ]
     },
     "condition": {
       "type": "origins:resource",

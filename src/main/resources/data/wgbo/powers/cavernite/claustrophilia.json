@@ -1,0 +1,14 @@
+{
+  "type": "origins:swimming",
+  "condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:on_block"
+      },
+      {
+        "type": "origins:sneaking"
+      }
+    ]
+  }
+}
