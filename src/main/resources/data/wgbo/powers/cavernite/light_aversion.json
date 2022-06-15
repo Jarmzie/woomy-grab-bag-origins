@@ -23,11 +23,13 @@
       "type": "origins:and",
       "conditions": [
         {
-          "type": "origins:exposed_to_sun"
-        },
-        {
           "type": "origins:status_effect",
           "effect": "minecraft:night_vision",
+          "inverted": true
+        },
+        {
+          "type": "origins:power_active",
+          "power": "wgbo:cavernite/dim_vision",
           "inverted": true
         }
       ]
@@ -35,11 +37,6 @@
   },
   "poor_eyesight": {
     "type": "origins:prevent_entity_render",
-    "entity_condition": {
-      "type": "origins:brightness",
-      "comparison": ">=",
-      "compare_to": 0.4
-    },
     "condition": {
       "type": "origins:and",
       "conditions": [
