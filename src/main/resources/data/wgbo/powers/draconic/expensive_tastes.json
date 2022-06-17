@@ -5,7 +5,7 @@
     "modifier": {
       "name": "Increased exhaustion",
       "operation": "multiply_base",
-      "value": 2.5
+      "value": 1.0
     }
   },
   "particular_tastes": {
@@ -173,7 +173,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:iron_nugget"
+                    "item": "minecraft:iron_nugget"
                   }
                 }
               },
@@ -190,7 +190,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:gold_nugget"
+                    "item": "minecraft:gold_nugget"
                   }
                 }
               },
@@ -207,7 +207,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:iron_ingot"
+                    "item": "minecraft:iron_ingot"
                   }
                 }
               },
@@ -224,7 +224,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:copper_ingot"
+                    "item": "minecraft:copper_ingot"
                   }
                 }
               },
@@ -241,7 +241,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:gold_ingot"
+                    "item": "minecraft:gold_ingot"
                   }
                 }
               },
@@ -258,7 +258,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:raw_iron"
+                    "item": "minecraft:raw_iron"
                   }
                 }
               },
@@ -275,7 +275,7 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "tag": "minecraft:raw_copper"
+                    "item": "minecraft:raw_copper"
                   }
                 }
               },

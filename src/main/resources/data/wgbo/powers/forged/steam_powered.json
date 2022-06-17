@@ -1,5 +1,13 @@
 {
   "type": "origins:multiple",
+  "inefficient_engineering": {
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+      "name": "Increased exhaustion",
+      "operation": "multiply_base",
+      "value": 1.5
+    }
+  },
   "refuel": {
     "type": "origins:active_self",
     "cooldown": 20,

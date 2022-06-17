@@ -15,13 +15,6 @@
     "duration_per_stack": 20,
     "effects": [
       {
-        "effect": "minecraft:weakness",
-        "is_ambient": true,
-        "show_particles": false,
-        "show_icon": false,
-        "amplifier": 0
-      },
-      {
         "effect": "minecraft:slowness",
         "is_ambient": true,
         "show_particles": false,

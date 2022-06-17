@@ -19,7 +19,7 @@
         "is_ambient": true,
         "show_particles": false,
         "show_icon": false,
-        "amplifier": 1
+        "amplifier": 0
       },
       {
         "effect": "minecraft:slowness",
