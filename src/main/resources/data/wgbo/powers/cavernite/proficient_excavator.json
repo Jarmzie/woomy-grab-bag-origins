@@ -1,0 +1,10 @@
+{
+  "type": "origins:multiple",
+  "mining_expert": {
+    "type": "origins:modify_break_speed",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": "1"
+    }
+  }
+}

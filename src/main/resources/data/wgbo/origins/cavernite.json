@@ -1,0 +1,14 @@
+{
+  "powers": [
+    "wgbo:cavernite/light_aversion",
+    "wgbo:cavernite/dim_vision",
+    "wgbo:cavernite/small_frame",
+    "wgbo:cavernite/claustrophilia",
+    "wgbo:cavernite/proficient_excavator"
+  ],
+  "icon": {
+    "item": "minecraft:bedrock"
+  },
+  "order": 0,
+  "impact": 2
+}
