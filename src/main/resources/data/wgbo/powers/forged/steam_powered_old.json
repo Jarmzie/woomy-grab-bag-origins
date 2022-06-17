@@ -116,6 +116,7 @@
       ]
     }
   },
+
   "fake_eat_slow_movement": {
     "type": "origins:conditioned_attribute",
     "tick_rate": 4,
