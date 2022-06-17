@@ -1,14 +1,27 @@
+
 {
-  "type": "origins:launch",
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:and",
+    "actions": [
+      {
+        "type": "origins:add_velocity",
+        "y": 2
+      },
+      {
+        "type": "origins:set_fall_distance",
+        "fall_distance": 0
+      },
+      {
+        "type": "origins:play_sound",
+        "sound": "minecraft:entity.parrot.fly"
+      }
+    ]
+  },
   "cooldown": 420,
   "hud_render": {
     "sprite_location": "wgbo:textures/gui/custom_bars.png",
     "bar_index": 1
   },
-  "sound": "minecraft:entity.parrot.fly",
-  "speed": 0.75,
-  "key": {
-    "key": "key.origins.primary_active",
-    "continuous": true
-  }
+  "set": "true"
 }
