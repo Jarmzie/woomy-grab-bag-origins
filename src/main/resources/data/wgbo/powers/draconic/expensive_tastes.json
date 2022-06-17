@@ -76,7 +76,6 @@
       ]
     }
   },
-
   "fake_eat": {
     "type": "origins:action_over_time",
     "entity_action": {
@@ -84,12 +83,12 @@
       "actions": [
         {
           "type": "origins:execute_command",
-          "command": "execute at @s positioned ~ ~1.5 ~ run particle minecraft:flame ^ ^ ^0.3 .09 .03 .03 0 3",
+          "command": "execute at @s positioned ~ ~1.5 ~ run particle item minecraft:gold_ingot ^ ^ ^0.3 .09 .03 .03 0 3",
           "permission_level": 4
         },
         {
           "type": "origins:execute_command",
-          "command": "playsound minecraft:item.firecharge.use player @a[distance=..10] ~ ~ ~ 1 1",
+          "command": "playsound minecraft:block.chain.place player @a ~ ~ ~ 1 1",
           "permission_level": 4
         }
       ]
@@ -116,7 +115,6 @@
       ]
     }
   },
-
   "fake_eat_slow_movement": {
     "type": "origins:conditioned_attribute",
     "modifier": {
@@ -132,7 +130,6 @@
       "compare_to": 0
     }
   },
-
   "fake_eat_slow_air_speed": {
     "type": "origins:modify_air_speed",
     "modifier": {
@@ -147,7 +144,6 @@
       "compare_to": 0
     }
   },
-
   "consume_resource": {
     "type": "origins:resource",
     "max": 32,
@@ -160,7 +156,7 @@
       "actions": [
         {
           "type": "origins:execute_command",
-          "command": "playsound minecraft:entity.player.burp player @a[distance=..10] ~ ~ ~ 1 1",
+          "command": "playsound minecraft:entity.player.burp player @a ~ ~ ~ 1 1",
           "permission_level": 4
         },
         {
@@ -173,31 +169,14 @@
                 "item_condition": {
                   "type": "origins:ingredient",
                   "ingredient": {
-                    "item": "minecraft:iron_nugget"
+                    "item": "minecraft:copper_ingot"
                   }
                 }
               },
               "action": {
                 "type": "origins:feed",
-                "food": 2,
-                "saturation": 0.6
-              }
-            },
-            {
-              "condition": {
-                "type": "origins:equipped_item",
-                "equipment_slot": "mainhand",
-                "item_condition": {
-                  "type": "origins:ingredient",
-                  "ingredient": {
-                    "item": "minecraft:gold_nugget"
-                  }
-                }
-              },
-              "action": {
-                "type": "origins:feed",
-                "food": 2,
-                "saturation": 1.2
+                "food": 4,
+                "saturation": 2.4
               }
             },
             {
@@ -214,24 +193,7 @@
               "action": {
                 "type": "origins:feed",
                 "food": 6,
-                "saturation": 9.6
-              }
-            },
-            {
-              "condition": {
-                "type": "origins:equipped_item",
-                "equipment_slot": "mainhand",
-                "item_condition": {
-                  "type": "origins:ingredient",
-                  "ingredient": {
-                    "item": "minecraft:copper_ingot"
-                  }
-                }
-              },
-              "action": {
-                "type": "origins:feed",
-                "food": 6,
-                "saturation": 9.6
+                "saturation": 7.2
               }
             },
             {
@@ -264,8 +226,8 @@
               },
               "action": {
                 "type": "origins:feed",
-                "food": 2,
-                "saturation": 1.2
+                "food": 3,
+                "saturation": 1.8
               }
             },
             {
@@ -282,7 +244,7 @@
               "action": {
                 "type": "origins:feed",
                 "food": 2,
-                "saturation": 1.2
+                "saturation": 0.4
               }
             },
             {
@@ -298,8 +260,8 @@
               },
               "action": {
                 "type": "origins:feed",
-                "food": 3,
-                "saturation": 1.8
+                "food": 4,
+                "saturation": 2.4
               }
             },
             {
@@ -315,8 +277,8 @@
               },
               "action": {
                 "type": "origins:feed",
-                "food": 6,
-                "saturation": 14.4
+                "food": 10,
+                "saturation": 16
               }
             },
 
@@ -334,7 +296,7 @@
               "action": {
                 "type": "origins:feed",
                 "food": 6,
-                "saturation": 14.4
+                "saturation": 9.6
               }
             },
             {
@@ -351,7 +313,7 @@
               "action": {
                 "type": "origins:feed",
                 "food": 10,
-                "saturation": 12
+                "saturation": 24
               }
             },
             {
@@ -368,7 +330,7 @@
               "action": {
                 "type": "origins:feed",
                 "food": 4,
-                "saturation": 10.2
+                "saturation": 8
               }
             },
             {
@@ -384,8 +346,8 @@
               },
               "action": {
                 "type": "origins:feed",
-                "food": 15,
-                "saturation": 24.6
+                "food": 20,
+                "saturation": 48
               }
             }
           ]
