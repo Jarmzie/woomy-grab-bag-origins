@@ -28,7 +28,7 @@
         {
           "type": "origins:add_velocity",
           "y": 3.0,
-          "set": "true"
+          "set": true
         },
         {
           "type": "origins:set_fall_distance",
