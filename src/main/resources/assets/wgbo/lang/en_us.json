@@ -17,7 +17,7 @@
   "origin.wgbo.forged.description": "A mechanical race constructed from iron to be a synthetic lifeform.",
 
   "power.wgbo.forged/metal_exterior.name": "Metal Exterior",
-  "power.wgbo.forged/metal_exterior.description": "You have innate iron armor and extra health but you cannot wear other armor.",
+  "power.wgbo.forged/metal_exterior.description": "You have addition health and resistance to fire damage",
   "power.wgbo.forged/mechanical_limbs.name": "Mechanical Limbs",
   "power.wgbo.forged/mechanical_limbs.description": "Your bare hands are as strong as an iron pickaxe.",
   "power.wgbo.forged/steam_powered.name": "Steam Powered",
@@ -55,13 +55,13 @@
   "origin.wgbo.draconic.description": "A proud dragon race that lives off of wealth.",
 
   "power.wgbo.draconic/draining_flight.name": "Draining Flight",
-  "power.wgbo.draconic/draining_flight.description": "You're capable of flight, but your heavy body makes you tire quickly.",
+  "power.wgbo.draconic/draining_flight.description": "You're capable of flight and can launch yourself upward, though it drains your hunger.",
   "power.wgbo.draconic/expensive_tastes.name": "Expensive Tastes",
   "power.wgbo.draconic/expensive_tastes.description": "You cannot eat normal food, and your diet consists of precious metals and gems.",
   "power.wgbo.draconic/fire_breath.name": "Dragon's Breath",
   "power.wgbo.draconic/fire_breath.description": "You are capable of spewing 3 fireballs to attack every 25 seconds.",
   "power.wgbo.draconic/natural_armor.name": "Natural Armor",
-  "power.wgbo.draconic/natural_armor.description": "You have tough scales that increase your defenses and protect from fire, but you cannot wear normal armor.",
+  "power.wgbo.draconic/natural_armor.description": "You have tough scales that increase your health and protect from fire.",
   "power.wgbo.draconic/natural_weapons.name": "Natural Weapons",
   "power.wgbo.draconic/natural_weapons.description": "Your tough claws function as natural weapons when empty handed.",
 

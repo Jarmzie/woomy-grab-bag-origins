@@ -6,7 +6,8 @@
     "actions": [
       {
         "type": "origins:add_velocity",
-        "y": 2
+        "y": 2,
+        "set": "true"
       },
       {
         "type": "origins:set_fall_distance",
@@ -22,6 +23,5 @@
   "hud_render": {
     "sprite_location": "wgbo:textures/gui/custom_bars.png",
     "bar_index": 1
-  },
-  "set": "true"
+  }
 }

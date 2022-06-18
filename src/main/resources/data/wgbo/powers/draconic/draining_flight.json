@@ -27,7 +27,8 @@
       "actions": [
         {
           "type": "origins:add_velocity",
-          "y": 3.0
+          "y": 3.0,
+          "set": "true"
         },
         {
           "type": "origins:set_fall_distance",
@@ -51,7 +52,6 @@
       "key": "key.origins.secondary_active",
       "continuous": true
     },
-    "set": "true",
     "condition": {
       "type": "origins:food_level",
       "comparison": ">",

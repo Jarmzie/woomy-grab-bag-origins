@@ -8,6 +8,12 @@
       "value": 1.5
     }
   },
+  "synthetic_biology": {
+    "type": "origins:prevent_item_use",
+    "item_condition": {
+      "type": "origins:food"
+    }
+  },
   "refuel": {
     "type": "origins:active_self",
     "cooldown": 20,
