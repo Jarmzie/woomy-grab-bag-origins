@@ -16,7 +16,7 @@
   },
   "devour": {
     "type": "origins:active_self",
-    "cooldown": 20,
+    "cooldown": 1,
     "key": {
       "key": "key.use",
       "continuous": true
@@ -48,8 +48,115 @@
       "type": "origins:and",
       "actions": [
         {
+          "type": "origins:if_else",
+          "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_consume_resource_delay",
+            "comparison": "==",
+            "compare_to": 8
+          },
+          "if_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_consume_resource",
+            "operation": "add",
+            "change": 1
+          }
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "add",
+          "change": 1
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_hold_buffer",
+          "change": 2
+        }
+      ]
+    }
+  },
+  "fake_eat": {
+    "type": "origins:action_over_time",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
           "type": "origins:execute_command",
-          "command": "execute at @s run playsound minecraft:block.chain.place player @a ~ ~ ~ 1 1",
+          "command": "execute at @s positioned ~ ~1.5 ~ run particle item minecraft:gold_ingot ^ ^ ^0.3 .09 .03 .03 0 3",
+          "permission_level": 4
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:block.chain.place player @a ~ ~ ~ 1 1",
+          "permission_level": 4
+        }
+      ]
+    },
+    "interval": 4,
+    "condition": {
+      "type": "origins:and",
+      "inverted": false,
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "inverted": false,
+          "resource": "*:*_consume_resource",
+          "comparison": "!=",
+          "compare_to": 0
+        },
+        {
+          "type": "origins:resource",
+          "inverted": false,
+          "resource": "*:*_consume_resource",
+          "comparison": "<",
+          "compare_to": 32
+        }
+      ]
+    }
+  },
+  "fake_eat_slow_movement": {
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "multiply_total",
+      "value": -0.8
+    },
+    "condition": {
+      "type": "origins:resource",
+      "inverted": false,
+      "resource": "*:*_consume_resource_delay",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "fake_eat_slow_air_speed": {
+    "type": "origins:modify_air_speed",
+    "modifier": {
+      "operation": "multiply_total",
+      "value": -0.9
+    },
+    "condition": {
+      "type": "origins:resource",
+      "inverted": false,
+      "resource": "*:*_consume_resource_delay",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "consume_resource": {
+    "type": "origins:resource",
+    "max": 32,
+    "min": 0,
+    "hud_render": {
+      "should_render": false
+    },
+    "max_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:execute_command",
+          "command": "playsound minecraft:entity.player.burp player @a ~ ~ ~ 1 1",
           "permission_level": 4
         },
         {
@@ -255,80 +362,75 @@
         },
         {
           "type": "origins:change_resource",
-          "resource": "*:*_devour_timer",
-          "change": 30,
-          "operation": "set"
+          "resource": "*:*_consume_resource",
+          "operation": "set",
+          "change": 0
+        },
+        {
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "set",
+          "change": 0
         }
       ]
     }
   },
-  "devour_timer": {
+  "consume_resource_delay": {
     "type": "origins:resource",
+    "max": 8,
     "min": 0,
-    "max": 20,
-    "min_action": {
-      "type": "origins:execute_command",
-      "command": "execute at @s run playsound minecraft:entity.player.burp player @a ~ ~ ~ 1 1",
-      "permission_level": 4
-    },
     "hud_render": {
       "should_render": false
-    },
-    "start_value": 0
+    }
   },
-  "refuel_timer_drain": {
+  "hold_buffer": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 3,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+  "clean_hold_buffer": {
     "type": "origins:action_over_time",
-    "interval": "1",
     "entity_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_hold_buffer",
+      "change": -1
+    },
+    "interval": 1,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_hold_buffer",
+      "comparison": ">",
+      "compare_to": 0
+    }
+  },
+  "stop_consumption": {
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "falling_action": {
       "type": "origins:and",
       "actions": [
         {
           "type": "origins:change_resource",
-          "resource": "*:*_devour_timer",
-          "change": -1
+          "resource": "*:*_consume_resource",
+          "operation": "set",
+          "change": 0
         },
         {
-          "type": "origins:execute_command",
-          "command": "execute at @s positioned ~ ~1.5 ~ run particle item minecraft:iron_ingot ^ ^ ^0.3 .09 .03 .03 0 1",
-          "permission_level": 4
+          "type": "origins:change_resource",
+          "resource": "*:*_consume_resource_delay",
+          "operation": "set",
+          "change": 0
         }
       ]
     },
     "condition": {
       "type": "origins:resource",
-      "resource": "*:*_devour_timer",
-      "comparison": "!=",
-      "compare_to": 0
-    }
-  },
-  "fake_eat_slow_movement": {
-    "type": "origins:conditioned_attribute",
-    "tick_rate": 2,
-    "modifier": {
-      "attribute": "minecraft:generic.movement_speed",
-      "operation": "multiply_total",
-      "value": -0.8
-    },
-    "condition": {
-      "type": "origins:resource",
-      "inverted": false,
-      "resource": "*:*_devour_timer",
+      "resource": "*:*_hold_buffer",
       "comparison": ">",
-      "compare_to": 0
-    }
-  },
-  "fake_eat_slow_air_speed": {
-    "type": "origins:modify_air_speed",
-    "modifier": {
-      "operation": "multiply_total",
-      "value": -0.9
-    },
-    "condition": {
-      "type": "origins:resource",
-      "inverted": false,
-      "resource": "*:*_devour_timer",
-      "comparison": ">",
-      "compare_to": 0
+      "compare_to": 1
     }
   }
 }
