@@ -338,6 +338,10 @@
                 "type": "origins:exposed_to_sky"
               },
               {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
+              },
+              {
                 "type": "origins:in_rain",
                 "inverted": "true"
               }
@@ -360,6 +364,10 @@
               },
               {
                 "type": "origins:exposed_to_sky"
+              },
+              {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
               },
               {
                 "type": "origins:in_rain"
@@ -385,6 +393,10 @@
                 "type": "origins:exposed_to_sky"
               },
               {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
+              },
+              {
                 "type": "origins:fluid_height",
                 "fluid": "minecraft:water",
                 "comparison": "==",
@@ -413,6 +425,10 @@
                 "compare_to": 0
               },
               {
+                "type": "origins:dimension",
+                "dimension": "minecraft:overworld"
+              },
+              {
                 "type": "origins:exposed_to_sky",
                 "inverted": true
               }
@@ -422,6 +438,50 @@
             "type": "origins:change_resource",
             "resource": "wgbo:plantlike/solar_power_solar_meter",
             "change": -1
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_end"
+              },
+              {
+                "type": "origins:block_collision",
+                "offset_x": 0,
+                "offset_y": 1,
+                "offset_z": 0
+              },
+              {
+                "type": "origins:block_collision",
+                "offset_x": 0,
+                "offset_y": 2,
+                "offset_z": 0
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": -1
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:and",
+            "conditions": [
+              {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_end"
+              }
+            ]
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "wgbo:plantlike/solar_power_solar_meter",
+            "change": 1
           }
         }
       ]
