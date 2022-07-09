@@ -21,41 +21,16 @@
   },
   "exhausting_flight":
   {
-    "type": "origins:active_self",
-    "entity_action": {
-      "type": "origins:and",
-      "actions": [
-        {
-          "type": "origins:add_velocity",
-          "y": 3.0,
-          "set": true
-        },
-        {
-          "type": "origins:set_fall_distance",
-          "fall_distance": 0
-        },
-        {
-          "type": "origins:play_sound",
-          "sound": "minecraft:entity.parrot.fly"
-        },
-        {
-          "type": "origins:exhaust",
-          "amount": 7.5
-        }
-      ]
-    },
-    "cooldown": 60,
+    "type": "origins:launch",
+    "cooldown": 500,
     "hud_render": {
       "should_render": false
     },
+    "sound": "minecraft:entity.parrot.fly",
+    "speed": 1,
     "key": {
       "key": "key.origins.secondary_active",
       "continuous": true
-    },
-    "condition": {
-      "type": "origins:food_level",
-      "comparison": ">",
-      "compare_to": 6
     }
   }
 }
